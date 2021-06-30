@@ -1,16 +1,17 @@
 import styled from "styled-components"
 import {motion} from "framer-motion"
-
+import {Link} from "react-router-dom"
 
 
 
 const Navbar=()=>{
     return(
         <Nav>
-             <div className="logo"><h1>Gulhuseyn Sadiqli</h1></div>  
+             <Link className="customLink" to="/"><div className="logo"><h1>Gulhuseyn Sadiqli</h1></div>  </Link>
              <div className="links">
              <div class="navbar">
-  <a class="nav-link nav-link-ltr" href="#">Skills</a>
+               <Link to="/skills"><a class="nav-link nav-link-ltr"href="/skills">Skills</a></Link>
+  
   <a class="nav-link nav-link-ltr" href="#">Experience</a>
   <a class="nav-link nav-link-ltr" href="#">Contact</a>
   <a class="nav-link nav-link-ltr" href="#">About</a>
@@ -26,6 +27,14 @@ color:#22C59F;
 display:flex;
 justify-content: space-between;
 margin:0 15%;
+.customLink{
+  text-decoration: none;
+  color:inherit;
+  transition: 0.2s;
+  :hover{
+    scale:1.1;
+  }
+}
 .logo{
     h1{
         margin:0;
