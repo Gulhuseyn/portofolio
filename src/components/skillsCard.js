@@ -1,8 +1,13 @@
 import styled from "styled-components"
 import {motion} from "framer-motion"
-const skillsCard=({title,knowledge,experience,stateClass})=>{
+const skillsCard=({title,knowledge,experience,transition})=>{
+    const moreHandler=(title)=>{
+        
+        
+    }
     return (
-        < CardContainer className={stateClass}>
+        < CardContainer id={title} >
+
            <div className="title"><h2>{title.toUpperCase()}</h2></div>
            <div className="rating">
             <div className="criteria">
@@ -23,19 +28,20 @@ const skillsCard=({title,knowledge,experience,stateClass})=>{
             </div>
            </div>
            <div className="more">
-           <i class="fas fa-chevron-down"></i>
+           <i onClick={()=>transition(title)} class="fas fa-chevron-down"></i>
            </div>
         </ CardContainer>
     )
 }
 
 const CardContainer=styled(motion.div)`
-width:18rem;
+width:16rem;
+
+
 border-radius: 2rem;
-margin:5%;
 background-color: #6DABED;
-display: inline-block;
-transition: 0.5s;
+transition: 1s;
+
 .title{
     text-align: center;
     padding:20% 0 0;
@@ -68,10 +74,13 @@ transition: 0.5s;
     }
 }
 .more{
-    padding-bottom: 1rem;
     text-align: center;
     font-size: 2rem;
     opacity: 0.5;
+    i{
+        cursor: url("https://i.postimg.cc/ydY8PznW/rsz-exclusion-2.png "),auto;
+        padding: 0.5rem;
+    }
 }
 `
 

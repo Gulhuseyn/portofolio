@@ -5,14 +5,13 @@ html{
     cursor: url("https://i.postimg.cc/VL3P6cCn/rsz-customcursor.png"),auto;
 }
 body{
-    
-
+    overflow-x:hidden;
     margin:0;
     padding:0;
     box-sizing: border-box;
     background-color: #1C1C1C;
     font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
+   
     .pointer{
         position:absolute;
         top:50%;
@@ -25,8 +24,8 @@ body{
         border-radius:50%;
         pointer-events:none;
         box-sizing: border-box;
-        /* transition: 0.2s; */
         opacity: 25%;
+        z-index: 9;
     }
     .pointer1{
         transition:0.05s;
@@ -46,8 +45,27 @@ body{
 h1{
     font-family: 'Lobster Two', cursive;
 }
+.line-anim{
+    position:absolute;
+    .line{
+    width:120%;
+    
+    left:-10%;
+    display: block;
+    margin:auto;
+    fill:#5867d6;
+    path{
+        stroke-dasharray: 2400;
+        stroke-dashoffset: 2400;
+        animation:lineAnimation 2s forwards;
+    }
 }
-
+}
+}
+@keyframes lineAnimation {
+  from {stroke-dashoffset:2400;}
+  to {stroke-dashoffset:0;}
+}
 `
 ;
  

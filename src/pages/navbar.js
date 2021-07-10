@@ -9,14 +9,11 @@ const Navbar=()=>{
         <Nav>
              <Link className="customLink" to="/"><div className="logo"><h1>Gulhuseyn Sadiqli</h1></div>  </Link>
              <div className="links">
-             <div class="navbar">
-               <Link to="/skills"><a class="nav-link nav-link-ltr"href="/skills">Skills</a></Link>
-  
-  <a class="nav-link nav-link-ltr" href="#">Experience</a>
-  <a class="nav-link nav-link-ltr" href="#">Contact</a>
-  <a class="nav-link nav-link-ltr" href="#">About</a>
-</div>
-                 
+              <div class="navbar">
+                  <Link to="/skills"><a class="nav-link nav-link-ltr"href="/skills">Skills</a></Link>
+                  <a class="nav-link nav-link-ltr" href="#">About</a>
+                  <a class="nav-link nav-link-ltr" href="#">Contact</a>
+              </div>  
              </div> 
         </Nav>
     )
@@ -27,6 +24,8 @@ color:#22C59F;
 display:flex;
 justify-content: space-between;
 margin:0 15%;
+z-index: 999;
+
 .customLink{
   text-decoration: none;
   color:inherit;

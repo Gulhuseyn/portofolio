@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom';
 import Navbar from "./pages/navbar"
 import Hero from "./pages/hero"
 import Skills from "./pages/skills"
+import Details from "./pages/details"
 function App() {
   const location=useLocation();
   //animating trail on mouse move
@@ -20,20 +21,19 @@ function App() {
   return (
     <div>
       <Globalstyle/>
-    <AnimatePresence exitBeforeEnter initial={false}>
+    
    
     
-    
+      <Navbar/>
 <Switch location={location}  >
-
-
   <Route path="/"  exact>
-  <Navbar/>
     <Hero/>
   </Route>
   <Route path="/skills" exact>
-  <Navbar/>
     <Skills/>
+  </Route>
+  <Route path="/skills/:name" exact>
+    <Details/>
   </Route>
 </Switch>
 {/* dots for trail animation */}
@@ -45,7 +45,7 @@ function App() {
   <div  className="pointer pointer5"></div>
 </div>
 
-     </AnimatePresence>
+    
      </div>
   );
 }
