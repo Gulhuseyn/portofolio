@@ -7,6 +7,7 @@ import Navbar from "./pages/navbar"
 import Hero from "./pages/hero"
 import Skills from "./pages/skills"
 import Details from "./pages/details"
+import About from "./pages/about"
 function App() {
   const location=useLocation();
   //animating trail on mouse move
@@ -31,6 +32,9 @@ function App() {
   </Route>
   <Route path="/skills" exact>
     <Skills/>
+  </Route>
+  <Route path="/about" exact>
+    <About/>
   </Route>
   <Route path="/skills/:name" exact>
     <Details/>
