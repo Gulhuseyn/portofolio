@@ -1,6 +1,5 @@
 import Globalstyle from "./globalstyles"
 import { Switch,Route } from "react-router-dom"
-import { AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 //importing components
 import Navbar from "./pages/navbar"
@@ -8,6 +7,7 @@ import Hero from "./pages/hero"
 import Skills from "./pages/skills"
 import Details from "./pages/details"
 import About from "./pages/about"
+import Contact from "./pages/contact"
 function App() {
   const location=useLocation();
   //animating trail on mouse move
@@ -35,6 +35,9 @@ function App() {
   </Route>
   <Route path="/about" exact>
     <About/>
+  </Route>
+  <Route path="/contact" exact>
+    <Contact/>
   </Route>
   <Route path="/skills/:name" exact>
     <Details/>

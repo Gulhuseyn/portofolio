@@ -47,9 +47,9 @@ h1{
 }
 .line-anim{
     position:absolute;
+    
     .line{
     width:120%;
-    
     left:-10%;
     display: block;
     margin:auto;
