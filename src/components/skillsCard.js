@@ -1,10 +1,6 @@
 import styled from "styled-components"
 import {motion} from "framer-motion"
 const skillsCard=({title,knowledge,experience,transition})=>{
-    const moreHandler=(title)=>{
-        
-        
-    }
     return (
         < CardContainer id={title} >
 

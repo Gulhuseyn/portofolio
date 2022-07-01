@@ -6,7 +6,11 @@ const Contact = () => {
       <Title>Lets have a chat</Title>
       <div className="iconsContainer">
         <div className="linkedIN">
-          <a href="https://www.linkedin.com/in/gulhuseyn-sadiqli-a23683166/">
+          <a
+            href="https://www.linkedin.com/in/gulhuseyn-sadiqli-a23683166/"
+            rel="noreferrer"
+            target="_blank"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="244"
@@ -31,7 +35,11 @@ const Contact = () => {
           </a>
         </div>
         <div className="github">
-          <a href="https://github.com/Gulhuseyn">
+          <a
+            href="https://github.com/Gulhuseyn"
+            rel="noreferrer"
+            target="_blank"
+          >
             <svg
               fill="#1c1c1c"
               xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +53,11 @@ const Contact = () => {
           </a>
         </div>
         <div className="email">
-          <a href="mailto:sadiqligulhuseyn@gmail.com">
+          <a
+            href="mailto:sadiqligulhuseyn@gmail.com"
+            rel="noreferrer"
+            target="_blank"
+          >
             <svg
               fill="#1c1c1c"
               width="300px"

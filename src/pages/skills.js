@@ -190,6 +190,7 @@ const SkillsContainer = styled(motion.div)`
     padding: 1rem;
     cursor: url("https://i.postimg.cc/ydY8PznW/rsz-exclusion-2.png "), auto;
   }
+
   .previous-button {
     left: 10%;
   }

@@ -8,7 +8,7 @@ const Navbar = () => {
       <Link className="customLink" to="/">
         <div className="logo">
           <h1>Gulhuseyn Sadiqli</h1>
-        </div>{" "}
+        </div>
       </Link>
       <div className="links">
         <div class="navbar">

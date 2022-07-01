@@ -29,7 +29,7 @@ const About = () => {
         <p className="question">Who am I ?</p>
         <div className="content">
           <div className="left">
-            <div className="header">
+            <div className="header aboutMe">
               <h2
                 style={{
                   color: information === "aboutMe" ? "#22C59F" : "white",
@@ -45,7 +45,7 @@ const About = () => {
               </h2>
               <div className="line"></div>
             </div>
-            <div className="header">
+            <div className="header  education">
               <h2
                 style={{
                   color: information === "education" ? "#22C59F" : "white",
@@ -61,7 +61,7 @@ const About = () => {
               </h2>
               <div className="line"></div>
             </div>
-            <div className="header">
+            <div className="header work">
               <h2
                 style={{ color: information === "work" ? "#22C59F" : "white" }}
               >
@@ -161,7 +161,6 @@ const About = () => {
 };
 
 const Container = styled(motion.div)`
-
   .line-anim .line path {
     stroke-dasharray: 2800;
     stroke-dashoffset: 2800;
@@ -188,8 +187,13 @@ const Container = styled(motion.div)`
     justify-content: space-between;
     .left {
       width: 30%;
+
       .header {
         margin: 0 0 3rem;
+        animation: leftContentAnimation 2s forwards;
+        position: relative;
+        right: 50rem;
+
         h2 {
           color: white;
           font-weight: lighter;
@@ -211,6 +215,15 @@ const Container = styled(motion.div)`
           background-color: white;
           margin-top: 0.5rem;
         }
+      }
+      .aboutMe {
+        animation-delay: 1.3s;
+      }
+      .education {
+        animation-delay: 1.5s;
+      }
+      .work {
+        animation-delay: 1.7s;
       }
     }
     .right {
@@ -255,6 +268,14 @@ const Container = styled(motion.div)`
     }
     to {
       stroke-dashoffset: 0;
+    }
+  }
+  @keyframes leftContentAnimation {
+    from {
+      right: 50rem;
+    }
+    to {
+      right: 0rem;
     }
   }
 `;
