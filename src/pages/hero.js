@@ -43,35 +43,35 @@ const Hero = () => {
             <br />I am
             <motion.div
               className="colored"
-              animate={{ opacity: [0, 1, 0], top: ["100%", "30%", "-50%"] }}
+              animate={{ opacity: [0, 1, 0], top: ["100%", "25%", "-50%"] }}
               transition={{ duration: 1.5, delay: 2 }}
             >
               Web developer
             </motion.div>
             <motion.div
               className="colored"
-              animate={{ opacity: [0, 1, 0], top: ["100%", "30%", "-50%"] }}
+              animate={{ opacity: [0, 1, 0], top: ["100%", "25%", "-50%"] }}
               transition={{ duration: 1.5, delay: 3.5 }}
             >
               Front-End developer
             </motion.div>
             <motion.div
               className="colored"
-              animate={{ opacity: [0, 1, 0], top: ["100%", "30%", "-50%"] }}
+              animate={{ opacity: [0, 1, 0], top: ["100%", "25%", "-50%"] }}
               transition={{ duration: 1.5, delay: 5 }}
             >
               Back-End developer
             </motion.div>
             <motion.div
               className="colored"
-              animate={{ opacity: [0, 1, 0], top: ["100%", "30%", "-50%"] }}
+              animate={{ opacity: [0, 1, 0], top: ["100%", "25%", "-50%"] }}
               transition={{ duration: 1.5, delay: 6.5 }}
             >
               UI/UX developer
             </motion.div>
             <motion.div
               className="colored"
-              animate={{ opacity: [0, 1], top: ["100%", "30%"] }}
+              animate={{ opacity: [0, 1], top: ["100%", "25%"] }}
               transition={{ duration: 1.5, delay: 8 }}
             >
               Gulhuseyn Sadiqli
@@ -109,7 +109,7 @@ const Landing = styled(motion.div)`
           color: white;
           padding: 0;
           margin: 0;
-          font-size: 1.2vw;
+          font-size: 1rem;
         }
       }
 
@@ -134,6 +134,19 @@ const Landing = styled(motion.div)`
         width: 20rem;
         padding: 0;
         margin: 0;
+      }
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .container {
+      margin: 5%;
+      .image {
+        top: 10rem;
+      }
+      .text {
+        h2 {
+          font-size: 1.5rem;
+        }
       }
     }
   }

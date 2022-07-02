@@ -5,28 +5,32 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <Nav>
-      <Link className="customLink" to="/">
-        <div className="logo">
-          <h1>Gulhuseyn Sadiqli</h1>
-        </div>
-      </Link>
-      <div className="links">
-        <div class="navbar">
-          <Link to="/skills">
-            <a class="nav-link nav-link-ltr" href="/skills">
-              Skills
-            </a>
-          </Link>
-          <Link to="/about">
-            <a class="nav-link nav-link-ltr" href="/about">
-              About
-            </a>
-          </Link>
-          <Link to="/contact">
-            <a class="nav-link nav-link-ltr" href="/contact">
-              Contact
-            </a>
-          </Link>
+      <div className="navigation">
+        <Link className="customLink" to="/">
+          <div className="logo">
+            <h1 id="logoWord">
+              {window.innerWidth < "768px" ? "Gulhuseyn Sadiqli" : "G/S"}
+            </h1>
+          </div>
+        </Link>
+        <div className="links">
+          <div class="navbar">
+            <Link to="/skills">
+              <a class="nav-link nav-link-ltr" href="/skills">
+                Skills
+              </a>
+            </Link>
+            <Link to="/about">
+              <a class="nav-link nav-link-ltr" href="/about">
+                About
+              </a>
+            </Link>
+            <Link to="/contact">
+              <a class="nav-link nav-link-ltr" href="/contact">
+                Contact
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </Nav>
@@ -34,12 +38,14 @@ const Navbar = () => {
 };
 
 const Nav = styled(motion.div)`
-  color: #22c59f;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 15%;
-  z-index: 999;
-
+  .navigation {
+    margin: 0 15%;
+    justify-content: space-between;
+    color: #22c59f;
+    display: flex;
+    align-items:center ;
+    z-index: 999;
+  }
   .customLink {
     text-decoration: none;
     color: inherit;
@@ -63,7 +69,7 @@ const Nav = styled(motion.div)`
     .nav-link {
       text-decoration: none;
       color: #22c59f;
-      padding: 20px 20px;
+      padding: 1.5rem 0.5rem;
       display: inline-block;
       position: relative;
       opacity: 0.75;
@@ -94,5 +100,14 @@ const Nav = styled(motion.div)`
       outline: none;
     }
   }
+  @media only screen and (max-width: 600px) {
+    .navigation {
+      margin: 5%;
+    }
+    .links {
+      width: auto;
+    }
+  }
 `;
+
 export default Navbar;

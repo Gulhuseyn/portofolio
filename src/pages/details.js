@@ -66,10 +66,12 @@ const Details = () => {
         </svg>
       </div>
       <div id="modal" className="modal">
-        <div onClick={close} className="button">
-          <i class="fas fa-times"></i>
+        <div className="modalContent">
+          <div onClick={close} className="button">
+            <i class="fas fa-times"></i>
+          </div>
+          <img id="modalImg" src="" alt="" />
         </div>
-        <img id="modalImg" src="" alt="" />
       </div>
 
       <motion.div
@@ -135,13 +137,28 @@ const Detail = styled(motion.div)`
   .modal {
     z-index: 5;
     display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    text-align: right;
+    .modalContent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      img {
+        z-index: 1;
+        width: auto;
+        height: 60vh;
+      }
+    }
     .button {
       i {
         font-size: 3rem;
         padding: 1rem;
-        position: absolute;
-        top: 5%;
-        right: 10%;
         cursor: url("https://i.postimg.cc/ydY8PznW/rsz-exclusion-2.png "), auto;
         transition: 0.1s;
         :hover {
@@ -149,34 +166,19 @@ const Detail = styled(motion.div)`
         }
       }
     }
-    background-color: rgba(0, 0, 0, 0.7);
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    text-align: center;
-    img {
-      z-index: 1;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: auto;
-      height: 70vh;
-    }
   }
 
   .container {
     position: relative;
     z-index: 2;
+    padding: 0 15%;
     h1 {
       text-align: center;
     }
     p {
       margin: 5% 0;
     }
-    padding: 0 15%;
+
     .knowledge,
     .experience {
       h2 {
@@ -212,6 +214,36 @@ const Detail = styled(motion.div)`
       transition: 1s;
       :hover {
         scale: 1.1;
+      }
+    }
+  }
+  @media only screen and (max-width: 650px) {
+    .container {
+      padding: 0 5%;
+      .knowledge,
+      .experience {
+        h2 {
+          font-size: 1.5rem;
+          margin: 5% 0 0 0;
+        }
+        .images {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+        }
+      }
+      .knowledge .images img,
+      .experience .images img {
+        height: 12rem;
+      }
+    }
+    .modal {
+      .modalContent {
+        img {
+          height: auto;
+          width: 100vw;
+        }
       }
     }
   }

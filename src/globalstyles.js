@@ -44,6 +44,7 @@ body{
     }
 h1{
     font-family: 'Lobster Two', cursive;
+    font-size:1.5rem ;
 }
 .line-anim{
     position:absolute;

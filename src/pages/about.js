@@ -31,47 +31,38 @@ const About = () => {
           <div className="left">
             <div className="header aboutMe">
               <h2
+                onClick={() => {
+                  setInformation("aboutMe");
+                }}
                 style={{
                   color: information === "aboutMe" ? "#22C59F" : "white",
                 }}
               >
-                About me{" "}
-                <i
-                  onClick={() => {
-                    setInformation("aboutMe");
-                  }}
-                  className="fa fa-chevron-right"
-                ></i>
+                About me <i className="fa fa-chevron-right"></i>
               </h2>
               <div className="line"></div>
             </div>
             <div className="header  education">
               <h2
+                onClick={() => {
+                  setInformation("education");
+                }}
                 style={{
                   color: information === "education" ? "#22C59F" : "white",
                 }}
               >
-                Education{" "}
-                <i
-                  onClick={() => {
-                    setInformation("education");
-                  }}
-                  className="fa fa-chevron-right"
-                ></i>
+                Education <i className="fa fa-chevron-right"></i>
               </h2>
               <div className="line"></div>
             </div>
             <div className="header work">
               <h2
+                onClick={() => {
+                  setInformation("work");
+                }}
                 style={{ color: information === "work" ? "#22C59F" : "white" }}
               >
-                Work{" "}
-                <i
-                  onClick={() => {
-                    setInformation("work");
-                  }}
-                  className="fa fa-chevron-right"
-                ></i>
+                Work <i className="fa fa-chevron-right"></i>
               </h2>
               <div className="line"></div>
             </div>
@@ -186,7 +177,7 @@ const Container = styled(motion.div)`
     display: flex;
     justify-content: space-between;
     .left {
-      width: 30%;
+      width: 40%;
 
       .header {
         margin: 0 0 3rem;
@@ -276,6 +267,45 @@ const Container = styled(motion.div)`
     }
     to {
       right: 0rem;
+    }
+  }
+  @media only screen and (max-width: 650px) {
+    .aboutContent {
+      margin: 3%;
+    }
+    .content {
+      margin-top: 20%;
+      display: flex;
+      flex-direction: column;
+      .left {
+        width: 100%;
+        margin-right: 5%;
+        display: flex;
+        .header {
+          margin: 1%;
+          h2 {
+            font-size: 1.2rem;
+            i {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+      .right {
+        width: 100%;
+        text-align: center;
+        .aboutMe,
+        .education,
+        .work {
+          svg {
+            margin: 5% 3% 1% 3%;
+          }
+          p {
+            font-size: 1rem;
+            text-align: left;
+          }
+        }
+      }
     }
   }
 `;
