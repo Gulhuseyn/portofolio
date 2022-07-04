@@ -19,7 +19,7 @@ const Details = () => {
     UI: UI,
     React: React,
     Maynooth1: Maynooth1,
-    Maynooth2: Maynooth2,
+    // Maynooth2: Maynooth2,
     Linguist: Linguist,
     Responsive: Responsive,
     Shongar: Shongar,

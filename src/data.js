@@ -117,7 +117,7 @@ const data = [
       },
       {
         title: "Maynooth-fictional furniture company",
-        url: "Maynooth2",
+        url: "Maynooth1",
       },
     ],
   },
