@@ -11,7 +11,6 @@ import Linguist from "../resources/linguist.png";
 import MealsToGo from "../resources/mealsToGo.png";
 import ReactNative from "../resources/reactNative.png";
 import Maynooth1 from "../resources/maynooth1.png";
-import Maynooth2 from "../resources/maynooth2.png";
 
 const Details = () => {
   const stringToObject = {
