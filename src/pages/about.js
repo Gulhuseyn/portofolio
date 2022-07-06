@@ -87,11 +87,9 @@ const About = () => {
                   />
                 </svg>
                 <p>
-                  Hi,my name is Gulhuseyn Sadiqli and i am a web/UI developer
-                  from Azerbaijan.Right now i am at my final semester of
-                  chemical engineering and plaing to do master's in IT field.I
-                  learn the best by doing real projects and when i am
-                  stuck,there is always a youtube tutorial for it :)
+                  Hi,my name is Gulhuseyn Sadiqli and I am a web/UI developer
+                  from Azerbaijan.I learn the best by doing real projects and
+                  when i am stuck,there is always a youtube tutorial for it :)
                 </p>
               </div>
             ) : (
@@ -116,7 +114,13 @@ const About = () => {
                     stroke-width="1"
                   />
                 </svg>
-                <p>If i had any,it would be here</p>
+                <p>
+                  I finished my bachelor's as a chemical engineer,however,my IT
+                  and design skills come from udemy courses and personal
+                  projects.I usually take one or two courses,the do some
+                  projects to hone my newly acquired skills and so the cycle
+                  goes on.
+                </p>
               </div>
             ) : (
               ""
@@ -139,7 +143,13 @@ const About = () => {
                     stroke-width="1"
                   />
                 </svg>
-                <p>Here we go again,so old yet so new</p>
+                <p>
+                  My work profile consists of freelance projects done for
+                  companies and indivuduals.One of the examples is "Linguist"- a
+                  website made for foreign language teacher with features like
+                  joining zoom meeting direclty from browser, publishing and
+                  reviewing articles and etc.
+                </p>
               </div>
             ) : (
               ""

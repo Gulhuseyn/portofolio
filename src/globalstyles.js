@@ -1,11 +1,16 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
+
 html{
     cursor: url("https://i.postimg.cc/VL3P6cCn/rsz-customcursor.png"),auto;
+    overflow-x:hidden;
+   
 }
 body{
+    
     overflow-x:hidden;
+    height:100vh ;
     margin:0;
     padding:0;
     box-sizing: border-box;
@@ -67,7 +72,5 @@ h1{
   from {stroke-dashoffset:2400;}
   to {stroke-dashoffset:0;}
 }
-`
-;
- 
+`;
 export default GlobalStyle;

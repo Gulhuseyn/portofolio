@@ -197,10 +197,11 @@ const SkillsContainer = styled(motion.div)`
   .next-button {
     right: 10%;
   }
-  @media  only screen and (max-width:650px){
-.carousel{
-  width:100%;
-}
+  @media only screen and (max-width: 650px) {
+    .carousel {
+      width: 100%;
+      height: 400px;
+    }
   }
 `;
 

@@ -70,8 +70,8 @@ const Hero = () => {
               UI/UX developer
             </motion.div>
             <motion.div
-              className="colored"
-              animate={{ opacity: [0, 1], top: ["100%", "25%"] }}
+              className="colored final"
+              animate={{ opacity: [0, 1], top: ["100%", "27.5%"] }}
               transition={{ duration: 1.5, delay: 8 }}
             >
               Gulhuseyn Sadiqli
